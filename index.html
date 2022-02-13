@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  
+  <head>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+
+  <body>
+    <h1>Head or Tail?</h1>
+    <div >
+    </div>
+  </body>
+
+  <script type="text/babel">
+
+    const head = <img className="images" src="head.jpg" width="150px" height="150px"/>;
+    const tail = <img className="images" src="tail.jpg" width="150px" height="150px"/>;
+    const div = document.querySelector("div");
+    const ultimatum = (
+      <div>
+        {head}
+        <br/>
+        If it's head, you pay. If it's tail, I pay.
+      </div>
+    );
+
+    ReactDOM.render(ultimatum, div);
+
+    function random() {
+      const choices = ["head", "tail"];
+      return choices[Math.floor(Math.random() * choices.length)];
+      }
+
+    const image = document.querySelector(".images");
+
+    image.addEventListener("mouseover", () => {
+        const coin = random();
+        const result = (
+          <div>
+            {coin === "tail" ? tail : head}
+            <br/>
+            {coin === "tail" && "Okay, I'll pay"} 
+            {coin === "head" && "Alright, hand over your money."}
+          </div>
+        );
+        ReactDOM.render(result, div);
+      });
+    
+    image.addEventListener("mouseout", () => {
+      ReactDOM.render(ultimatum, div);
+      });
+
+  </script>
+
+</html>
+
