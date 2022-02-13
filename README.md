@@ -14,3 +14,7 @@ Premise of this project is simple. Let the computer decide who should pay your d
 
 To toss the coin, simply move your mouse over to the image of the coin. 
 Game resets once you move your mouse out of the image.
+
+Link: 
+
+https://wteo.github.io/headOrTails/
