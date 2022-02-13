@@ -1,6 +1,6 @@
 # Head Or Tails
 
-This is just for learing experience.
+This is just for  my learning experience.
 
 Played around with the basic concept of React. 
 
@@ -13,4 +13,4 @@ Topics covered included:
 Premise of this project is simple. Let the computer decide who should pay your drink. 
 
 To toss the coin, simply move your mouse over to the image of the coin. 
-Game resent once you move your mouse out of the image.
+Game resets once you move your mouse out of the image.
